@@ -1,7 +1,5 @@
-// Require Mongoose
 const mongoose = require('mongoose');
 
-// Create a shortcut variable for Schema
 const Schema = mongoose.Schema;
 
 // Create a carbSchema
@@ -28,5 +26,5 @@ const carbSchema = new Schema({
     },
 }, { timestamps: true });
 
-// export the result of compiling our schema into a model
+
 module.exports = mongoose.model('Carb', carbSchema);

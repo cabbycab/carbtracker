@@ -20,7 +20,7 @@
             </tr>
         </thead>
         <tbody>
-            <% notes.forEach(function(note) { %>
+            <% carbs.forEach(function(carb) { %>
             <tr>
                 <td>
                     <%= carb.date %>
@@ -38,10 +38,10 @@
                     <%= carb.unitsTaken %>
                 </td>
                 <td>
-                    <form action="/notes/<%= note._id%>?_method=DELETE" method="POST">
+                    <form action="/carbs/<%= carb._id%>?_method=DELETE" method="POST">
                         <input type="submit" value="DELETE">
                     </form>
-                    <a href="/notes/<%= note._id %>/edit">EDIT</a>
+                    <a href="/carbs/<%= carb._id %>/edit">EDIT</a>
                 </td>
             </tr>
         <% }) %>
