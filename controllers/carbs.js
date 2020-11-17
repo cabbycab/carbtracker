@@ -1,32 +1,32 @@
 const Carb = require("../models/carb");
 
-// module.exports = {
-//     index,
-//     new: newCarb,
-//     delete: deleteCarb,
-//     update, 
-//     create, 
-//     edit
-// };
+module.exports = {
+    index,
+    new: newCarb,
+    delete: deleteCarb,
+    update, 
+    create, 
+    edit
+};
 
 
 
-const index = (req, res) => {
-    Carb.find({}).sort('').exec((err,carbs)=>{
-        res.render("carbs/index", {carbs}); 
-    })
-}
+// const index = (req, res) => {
+//     Carb.find({}).sort('').exec((err,carbs)=>{
+//         res.render("carbs/index", {carbs}); 
+//     })
+// }
 
 // const index = (req,res) => res.render("carbs/index", {carbs});
 
 
-// function index(req, res) {
-//     Carb.find({}, function(err, carbs) {
-//         res.render("carbs/index", {
-//             carbs
-//         });
-//     })
-//     };
+function index(req, res) {
+    Carb.find({}, function(err, carbs) {
+        res.render("carbs/index", {
+            carbs
+        });
+    });
+};
 
 function newCarb(req, res) {
     res.render("carbs/new");
@@ -56,11 +56,3 @@ function edit(req, res) {
     });
 };
 
-module.exports = {
-    index,
-    new: newCarb,
-    delete: deleteCarb,
-    update, 
-    create, 
-    edit
-};

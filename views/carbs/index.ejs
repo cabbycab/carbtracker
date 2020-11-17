@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>Diabetes Log</header>
-
+    <br><br>
     <table>
         <thead>
             <tr>
@@ -17,6 +17,8 @@
                 <th>Blood Sugar</th>
                 <th>Carbs</th>
                 <th>Units Taken</th>
+                <th>Delete</th>
+                <th>Edit</th>
             </tr>
         </thead>
         <tbody>
@@ -32,7 +34,7 @@
                     <%= carb.bloodSugar %>
                 </td>
                 <td>
-                    <%= carb.Carbs %>
+                    <%= carb.carbs %>
                 </td>
                 <td>
                     <%= carb.unitsTaken %>
@@ -41,12 +43,14 @@
                     <form action="/carbs/<%= carb._id%>?_method=DELETE" method="POST">
                         <input type="submit" value="DELETE">
                     </form>
+                </td>
+                <td>
                     <a href="/carbs/<%= carb._id %>/edit">EDIT</a>
                 </td>
             </tr>
         <% }) %>
         </tbody>
-    </table>
+    </table> <br>
     <a href="/carbs/new">Add Log</a>
 </body>
 </html>

@@ -8,5 +8,27 @@
 </head>
 <body>
     <header>Edit Log</header>
+
+    <form action="/carbs/<%= carb._id %>?_method=PUT" method="POST", value="<%= carb.date %>">
+        <fieldset>
+        <label for="date">Date</label>
+        <input type="date" name="date"> <br>
+
+        <label for="mealTime">Meal Time</label>
+        <input type="time" name="mealTime"> <br>
+
+        <label for="bloodSugar">Blood Sugar</label>
+        <input type="text" name="bloodSugar"> <br>
+
+        <label for="carbs">Carbs</label>
+        <input type="text" name="carbs"> <br>
+
+        <label for="unitsTaken">Units Taken</label>
+        <input type="text" name="unitsTaken"> <br>
+      </fieldset>
+      <button type="submit">Add Log</button>
+      <button type="submit", action="/carbs/"> Return to Log</button>
+      </form>
+
 </body>
 </html>
