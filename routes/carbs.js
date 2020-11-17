@@ -14,8 +14,10 @@ router.post("/", carbsCtrl.create);
 
 router.get("/:id/edit", carbsCtrl.edit);
 
-router.get('/', function(req, res) {
-    res.render('carbs/index');
-   });
+router.get("/", carbsCtrl.index);
+
+// router.get('/', function(req, res) {
+//     res.render('carbs/index');
+//    });
 
 module.exports = router;
