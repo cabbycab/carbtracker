@@ -1,8 +1,8 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const carbsCtrl = require('../controllers/carbs');
+const carbsCtrl = require("../controllers/carbs");
 
-router.get('/', carbsCtrl.index);
+router.get("/", carbsCtrl.index);
 
 router.get("/new", carbsCtrl.new);
 
@@ -14,5 +14,8 @@ router.post("/", carbsCtrl.create);
 
 router.get("/:id/edit", carbsCtrl.edit);
 
+router.get('/', function(req, res) {
+    res.render('carbs/index');
+   });
 
 module.exports = router;
