@@ -9,12 +9,14 @@ header {
     text-align: center;
     justify-content: center;
     background: #CC4A2F ;
-    height: 90px;
+    padding: 20px;
     color: white;
     font-size: 45px;
     font-weight: bold;
     text-shadow: 2px 2px 4px black;
 }
+ 
+/* Data table */
 
 input[type=text], 
 input[type=date], 
@@ -51,10 +53,6 @@ label {
     display: block;
 }
 
-a:visited {
-    color: blue;
-}
-
 table {
     border-collapse: collapse;
     width: 100%;
@@ -73,7 +71,46 @@ th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #CC4A2F;
+    background-color: grey;
     color: white;
 }
+
+/* Navigation */
+nav {
+    background-color: #CC4A2F;
+    height: 35px;
+    padding: 10px;
+}
+
+nav li {
+    display: inline;
+    padding: 10px 12px 10px 12px;
+    font-size: 20px;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+li a:hover {
+    text-shadow: 3px 3px 7px black;
+}
+
+/* Visted Links Stay Blue */
+/* a:visited {
+    color: blue;
+} */
+
+ul {
+    padding-inline-start: 0;
+}
+
+i {
+    padding: 12px;
+}
+
+
+
 

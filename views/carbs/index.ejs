@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
     <title>Diabetes Log</title>
 </head>
 <body>
-    <header>Diabetes Log</header>
+    <header><i class="fas fa-tint"></i>Diabetes Log</header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/carbs/new">Add Log</a></li>
+        </ul>
+    </nav>
     <br><br>
     <table>
         <thead>
@@ -25,10 +34,10 @@
             <% carbs.forEach(function(carb) { %>
             <tr>
                 <td>
-                    <%= carb.date %>
+                    <%= carb.date.toDateString() %>
                 </td>
                 <td>
-                    <%= carb.mealTime %>
+                    <%= carb.mealTime.toLocaleString() %>
                 </td>
                 <td>
                     <%= carb.bloodSugar %>
