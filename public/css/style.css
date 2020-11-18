@@ -98,17 +98,27 @@ li a:hover {
     text-shadow: 3px 3px 7px black;
 }
 
-/* Visted Links Stay Blue */
-/* a:visited {
-    color: blue;
-} */
-
 ul {
     padding-inline-start: 0;
 }
 
 i {
     padding: 12px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    width: 100%;
+    background-color: #CC4A2F;
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    height: 20px;
+    padding: 20px;
+    padding-inline-start: 0;
 }
 
 
