@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-    crossorigin="anonymous" />
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
     <title>Add New Log</title>
 </head>
+
 <body>
+
     <header><i class="fas fa-tint"></i>Add Log</header>
+
     <h3>Add your meal details here to be added to your log:</h3>
+
     <form action="/carbs" method="POST" autocomplete="off">
         <fieldset>
-        <label for="date">Date</label>
-        <input type="date" name="date"> <br>
+            <label for="date">Date</label>
+            <input type="date" name="date"> <br>
 
-        <label for="mealTime">Meal Time</label>
-        <input type="time" name="mealTime"> <br>
+            <label for="mealTime">Meal Time</label>
+            <input type="time" name="mealTime"> <br>
 
-        <label for="bloodSugar">Blood Sugar</label>
-        <input type="text" name="bloodSugar"> <br>
+            <label for="bloodSugar">Blood Sugar</label>
+            <input type="text" name="bloodSugar"> <br>
 
-        <label for="carbs">Carbs</label>
-        <input type="text" name="carbs"> <br>
+            <label for="carbs">Carbs</label>
+            <input type="text" name="carbs"> <br>
 
-        <label for="unitsTaken">Units Taken</label>
-        <input type="text" name="unitsTaken"> <br>
-      </fieldset>
-      <button type="submit">Add Log</button>
+            <label for="unitsTaken">Units Taken</label>
+            <input type="text" name="unitsTaken"> <br>
+        </fieldset>
+        <button type="submit">Add Log</button>
     </form>
-
+    
     <footer>
         <p>Copyright &copy; All Rights Reserved Diabetes Log 2020</p>
     </footer>
-    
+
 </body>
+
 </html>

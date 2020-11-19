@@ -1,19 +1,22 @@
 const mongoose = require("mongoose");
 
 const db = mongoose.connection;
+const MONGODB_URI = process.env.MONGODB_URI;
 
-const connectionURI = "mongodb+srv://admin:321Meow321@cluster0.rhzud.mongodb.net/carbtracker?retryWrites=true&w=majority";
-
-mongoose.connect(connectionURI, {
+mongoose.connect(MONGODB_URI, {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
 
-db.on("connected", function() {
+db.on("connected", function () {
     console.log(`Connected to MongoDB on ${db.host}:${db.port}`);
 });
 
-db.on("error", function(error) {
+db.on("error", function (error) {
     console.log(`Encountered the following error: ${error.message}`);
+});
+
+db.on("disconnected", function () {
+    console.log("MongDB is disconnected");
 });

@@ -4,24 +4,15 @@ module.exports = {
     index,
     new: newCarb,
     delete: deleteCarb,
-    update, 
-    create, 
+    update,
+    create,
     edit
 };
 
 
-
-// const index = (req, res) => {
-//     Carb.find({}).sort('').exec((err,carbs)=>{
-//         res.render("carbs/index", {carbs}); 
-//     })
-// }
-
-// const index = (req,res) => res.render("carbs/index", {carbs});
-
-
 function index(req, res) {
-    Carb.find({}, function(err, carbs) {
+    Carb.find({}, function (err, carbs) {
+        console.log(carbs)
         res.render("carbs/index", {
             carbs
         });
@@ -33,26 +24,27 @@ function newCarb(req, res) {
 };
 
 function deleteCarb(req, res) {
-    Carb.findByIdAndDelete(req.params.id, function(err, deletedCarb) {
+    Carb.findByIdAndDelete(req.params.id, function (err, deletedCarb) {
         res.redirect("/carbs");
     });
 };
 
 function update(req, res) {
-    Carb.findByIdAndUpdate(req.params.id, req.body, function(err, updatedCarb){
+    Carb.findByIdAndUpdate(req.params.id, req.body, function (err, updatedCarb) {
         res.redirect("/carbs");
     });
 };
 
 function create(req, res) {
-    Carb.create(req.body, function(err, carb) {
-        res.redirect("/carbs") 
-    });
+    Carb.create(req.body, function (err, carb) {
+        res.redirect("/carbs")
+    })
 };
 
 function edit(req, res) {
-    Carb.findById(req.params.id, function(err, carb) {
-        res.render("carbs/edit", { carb });
+    Carb.findById(req.params.id, function (err, carb) {
+        res.render("carbs/edit", {
+            carb
+        });
     });
 };
-

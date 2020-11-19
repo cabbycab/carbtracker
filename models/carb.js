@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
@@ -24,7 +24,9 @@ const carbSchema = new Schema({
         type: Number,
         required: true
     },
-}, { timestamps: true });
+}, 
+    {timestamps: true
+});
 
 
-module.exports = mongoose.model('Carb', carbSchema);
+module.exports = mongoose.model("Carb", carbSchema);

@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const carbsCtrl = require("../controllers/carbs");
 
+
 router.get("/", carbsCtrl.index);
 
 router.get("/new", carbsCtrl.new);
@@ -16,8 +17,5 @@ router.get("/:id/edit", carbsCtrl.edit);
 
 router.get("/", carbsCtrl.index);
 
-// router.get('/', function(req, res) {
-//     res.render('carbs/index');
-//    });
 
 module.exports = router;
