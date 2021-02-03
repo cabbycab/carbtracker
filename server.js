@@ -16,13 +16,15 @@ app.set("view engine", "ejs");
 app.use(morgan("dev"));
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
-app.use(express.urlencoded({
-    extended: false
-}));
+app.use(
+  express.urlencoded({
+    extended: false,
+  })
+);
 
 app.use("/", indexRouter);
 app.use("/carbs", carbsRouter);
 
 app.listen(port, function () {
-    console.log(`Express is listening on port: ${port}`);
+  console.log(`Express is listening on port: ${port}`);
 });
