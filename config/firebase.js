@@ -26,7 +26,6 @@
 // module.exports = {
 //   login,
 //   logout,
-//   auth,
 // };
 
 //////////// SCRIPT OPTION //////////////////

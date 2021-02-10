@@ -29,5 +29,5 @@ app.listen(port, function () {
   console.log(`Express is listening on port: ${port}`);
 });
 
-const firebase = require("firebase/app");
-require("firebase/auth");
+// const firebase = require("firebase/app");
+// require("firebase/auth");
