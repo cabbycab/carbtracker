@@ -1,3 +1,6 @@
+html {
+  width: 100%;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
@@ -13,10 +16,20 @@ header {
   justify-content: center;
   background: #cc4a2f;
   padding: 20px;
+  padding-bottom: 0;
   color: white;
   font-size: 45px;
   font-weight: bold;
   text-shadow: 2px 2px 4px black;
+}
+
+.headers {
+  text-decoration: none;
+  color: white;
+}
+
+.headers:hover {
+  text-shadow: 2px 2px 4px grey;
 }
 
 /* Data table */
@@ -38,7 +51,8 @@ input[type="time"] {
   font-size: 16px;
 }
 
-button[type="submit"] {
+button[type="submit"],
+.add-btn {
   width: 150px;
   background-color: #cc4a2f;
   color: white;
@@ -51,6 +65,17 @@ button[type="submit"] {
   text-shadow: 2px 2px 4px black;
 }
 
+.add-btn {
+  margin-top: 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover,
+.add-btn:hover {
+  text-shadow: 2px 2px 4px grey;
+}
+
 label {
   font-weight: bold;
   display: block;
@@ -59,6 +84,7 @@ label {
 table {
   border-collapse: collapse;
   width: 100%;
+  margin-bottom: 15px;
 }
 
 td,
@@ -88,7 +114,7 @@ nav {
 
 nav li {
   display: inline;
-  padding: 10px 18px 10px 18px;
+  padding: 0px 18px 0px 18px;
   font-size: 20px;
 }
 

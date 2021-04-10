@@ -12,31 +12,31 @@
 </head>
 
 <body>
-    
-    <header><i class="fas fa-tint"></i>Edit Log</header>
+
+    <header> <a href="/carbs" class="headers"> <i class="fas fa-tint"></i>Edit Log</a></header>
 
     <form action="/carbs/<%= carb._id %>?_method=PUT" method="POST">
         <fieldset>
             <label for="date">Date</label>
-            <input type="date" name="date", value="<%= carb.date %>"> <br>
+            <input type="date" name="date" , value="<%= carb.date %>"> <br>
 
             <label for="mealTime">Meal Time</label>
-            <input type="time" name="mealTime", value="<%= carb.mealTime %>"> <br>
+            <input type="time" name="mealTime" , value="<%= carb.mealTime %>"> <br>
 
             <label for="bloodSugar">Blood Sugar</label>
-            <input type="text" name="bloodSugar", value="<%= carb.bloodSugar %>"> <br>
+            <input type="text" name="bloodSugar" , value="<%= carb.bloodSugar %>"> <br>
 
             <label for="carbs">Carbs</label>
-            <input type="text" name="carbs", value="<%= carb.carbs %>"> <br>
+            <input type="text" name="carbs" , value="<%= carb.carbs %>"> <br>
 
             <label for="unitsTaken">Units Taken</label>
-            <input type="text" name="unitsTaken", value="<%= carb.unitsTaken %>"> <br>
+            <input type="text" name="unitsTaken" , value="<%= carb.unitsTaken %>"> <br>
         </fieldset>
-        
+
         <button type="submit">Edit Log</button>
         <button type="submit" , action="/carbs/"> Return to Log</button>
     </form>
-    
+
     <footer>
         <p>Copyright &copy; All Rights Reserved Diabetes Log 2020</p>
     </footer>
